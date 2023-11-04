@@ -1,5 +1,5 @@
 ﻿namespace AdventOfCode {
-    public static class AdventOfCode2022_Day01 {
+    public static class AoC2022_Day01 {
 
         public static int CalculateA(IEnumerable<string> lines) {
 

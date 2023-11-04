@@ -1,7 +1,7 @@
 ﻿using System.Text;
 
 namespace AdventOfCode {
-    public static class AdventOfCode2022_Day02 {
+    public static class AoC2022_Day02 {
 
         private enum PlaysType {
             Rock,

@@ -2,7 +2,7 @@ using AdventOfCode;
 using FluentAssertions;
 
 namespace AdventOfCode.Test {
-    public class AdventOfCode2022Test {
+    public class AoC2022Test {
 
         private string DATA_PATH => Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory())?.Parent?.Parent?.Parent?.FullName, "Data");
 
@@ -15,7 +15,7 @@ namespace AdventOfCode.Test {
             var lines = File.ReadAllLines(filePath);
 
             //Act
-            var calculated = AdventOfCode2022_Day01.CalculateA(lines);
+            var calculated = AoC2022_Day01.CalculateA(lines);
 
             //Assert
             calculated.Should().Be(expected);
@@ -30,7 +30,7 @@ namespace AdventOfCode.Test {
             var lines = File.ReadAllLines(filePath);
 
             //Act
-            var calculated = AdventOfCode2022_Day01.CalculateB(lines);
+            var calculated = AoC2022_Day01.CalculateB(lines);
 
             //Assert
             calculated.Should().Be(expected);
@@ -45,7 +45,7 @@ namespace AdventOfCode.Test {
             var lines = File.ReadAllLines(filePath);
 
             //Act
-            var calculated = AdventOfCode2022_Day02.CalculateA(lines);
+            var calculated = AoC2022_Day02.CalculateA(lines);
 
             //Assert
             calculated.Should().Be(expected);
@@ -60,7 +60,22 @@ namespace AdventOfCode.Test {
             var lines = File.ReadAllLines(filePath);
 
             //Act
-            var calculated = AdventOfCode2022_Day02.CalculateB(lines);
+            var calculated = AoC2022_Day02.CalculateB(lines);
+
+            //Assert
+            calculated.Should().Be(expected);
+        }
+
+        [Theory]
+        [InlineData(@"03\test.txt", 157)]
+        [InlineData(@"03\input.txt", 8394)]
+        public void Day03ATest(string dataFile, int expected) {
+            //Arrange
+            var filePath = Path.Combine(DATA_PATH, dataFile);
+            var lines = File.ReadAllLines(filePath);
+
+            //Act
+            var calculated = AoC2022_Day03.CalculateA(lines);
 
             //Assert
             calculated.Should().Be(expected);

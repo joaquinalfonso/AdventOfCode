@@ -80,5 +80,51 @@ namespace AdventOfCode.Test {
             //Assert
             calculated.Should().Be(expected);
         }
+
+
+        [Theory]
+        [InlineData(@"03\test.txt", 70)]
+        [InlineData(@"03\input.txt", 2413)]
+        public void Day03BTest(string dataFile, int expected) {
+            //Arrange
+            var filePath = Path.Combine(DATA_PATH, dataFile);
+            var lines = File.ReadAllLines(filePath);
+
+            //Act
+            var calculated = AoC2022_Day03.CalculateB(lines);
+
+            //Assert
+            calculated.Should().Be(expected);
+        }
+
+        [Theory]
+        [InlineData(@"04\test.txt", 2)]
+        [InlineData(@"04\input.txt", 477)]
+        public void Day04ATest(string dataFile, int expected) {
+            //Arrange
+            var filePath = Path.Combine(DATA_PATH, dataFile);
+            var lines = File.ReadAllLines(filePath);
+
+            //Act
+            var calculated = AoC2022_Day04.CalculateA(lines);
+
+            //Assert
+            calculated.Should().Be(expected);
+        }
+
+        [Theory]
+        [InlineData(@"04\test.txt", 4)]
+        [InlineData(@"04\input.txt", 830)]
+        public void Day04BTest(string dataFile, int expected) {
+            //Arrange
+            var filePath = Path.Combine(DATA_PATH, dataFile);
+            var lines = File.ReadAllLines(filePath);
+
+            //Act
+            var calculated = AoC2022_Day04.CalculateB(lines);
+
+            //Assert
+            calculated.Should().Be(expected);
+        }
     }
 }
